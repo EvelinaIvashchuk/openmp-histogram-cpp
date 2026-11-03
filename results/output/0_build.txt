@@ -1,0 +1,14 @@
+Lab4 % make clean
+rm -rf bin
+Lab4 % make
+clang++ -O2 -std=c++17 -Wall src/hello.cpp -o bin/hello -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp
+clang++ -O2 -std=c++17 -Wall src/histogram.cpp -o bin/histogram -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp
+clang++ -O2 -std=c++17 -Wall src/clauses.cpp -o bin/clauses -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp
+clang++ -O2 -std=c++17 -Wall src/primes_schedule.cpp -o bin/primes_schedule -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp
+clang++ -O2 -std=c++17 -Wall src/stages.cpp -o bin/stages -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp
+clang++ -O2 -std=c++17 -Wall src/bench.cpp -o bin/bench -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp
+Lab4 % clang++ --version
+Apple clang version 21.0.0 (clang-2100.3.34.2)
+Target: arm64-apple-darwin27.0.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin

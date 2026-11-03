@@ -1,0 +1,4 @@
+Lab4 % OMP_NUM_THREADS=8 OMP_SCHEDULE=static ./bin/primes_schedule
+primes(20000000) = 1270607, time = 0.746 s, threads = 8, schedule kind = 1, chunk = 0
+Lab4 % OMP_NUM_THREADS=8 OMP_SCHEDULE=dynamic,1000 ./bin/primes_schedule
+primes(20000000) = 1270607, time = 0.647 s, threads = 8, schedule kind = 2, chunk = 1000
