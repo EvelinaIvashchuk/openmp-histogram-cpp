@@ -5,7 +5,7 @@ LIBOMP   = $(shell brew --prefix libomp 2>/dev/null)
 OMPFLAGS = -Xpreprocessor -fopenmp -I$(LIBOMP)/include -L$(LIBOMP)/lib -lomp
 CXXFLAGS = -O2 -std=c++17 -Wall
 
-PROGRAMS = hello histogram clauses
+PROGRAMS = hello histogram clauses primes_schedule
 
 all: $(addprefix bin/,$(PROGRAMS))
 
