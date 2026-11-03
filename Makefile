@@ -5,7 +5,7 @@ LIBOMP   = $(shell brew --prefix libomp 2>/dev/null)
 OMPFLAGS = -Xpreprocessor -fopenmp -I$(LIBOMP)/include -L$(LIBOMP)/lib -lomp
 CXXFLAGS = -O2 -std=c++17 -Wall
 
-PROGRAMS = hello histogram
+PROGRAMS = hello histogram clauses
 
 all: $(addprefix bin/,$(PROGRAMS))
 
