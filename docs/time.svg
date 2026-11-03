@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-label="Час T(p)">
+<style>
+  .surface { fill: #fcfcfb; }
+  .title { fill: #0b0b0b; font: 600 16px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .sub { fill: #52514e; font: 13px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .tick { fill: #898781; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+  .axis-title { fill: #52514e; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .label { fill: #0b0b0b; font: 12px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .grid { stroke: #e1e0d9; stroke-width: 1; }
+  .base { stroke: #c3c2b7; stroke-width: 1; }
+  .ideal { stroke: #898781; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+  .cores { stroke: #c3c2b7; stroke-width: 1; stroke-dasharray: 2 3; }
+  .c1 { stroke: #2a78d6; } .f1 { fill: #2a78d6; }
+  .c2 { stroke: #eb6834; } .f2 { fill: #eb6834; }
+  .c3 { stroke: #1baf7a; } .f3 { fill: #1baf7a; }
+  .line { stroke-width: 2; fill: none; stroke-linejoin: round; stroke-linecap: round; }
+  .dot { stroke: #fcfcfb; stroke-width: 2; }
+  @media (prefers-color-scheme: dark) {
+    .surface { fill: #1a1a19; }
+    .title, .label { fill: #f0efec; }
+    .sub, .axis-title { fill: #c3c2b7; }
+    .grid { stroke: #2c2c2a; }
+    .base, .cores { stroke: #383835; }
+    .c1 { stroke: #3987e5; } .f1 { fill: #3987e5; }
+    .c2 { stroke: #d95926; } .f2 { fill: #d95926; }
+    .c3 { stroke: #199e70; } .f3 { fill: #199e70; }
+    .dot { stroke: #1a1a19; }
+  }
+</style>
+<rect class="surface" width="720" height="400" rx="8"/>
+<text class="title" x="16" y="28">Час T(p)</text>
+<text class="sub" x="16" y="48">Гістограма, reduction(+ : h[:256]); медіана з 5; Apple M4 (4P + 6E)</text>
+<line class="c1 line" x1="16" y1="68" x2="34" y2="68"/>
+<text class="sub" x="40" y="72">n = 10⁸</text>
+<line class="c2 line" x1="132" y1="68" x2="150" y2="68"/>
+<text class="sub" x="156" y="72">n = 5·10⁸</text>
+<line class="c3 line" x1="248" y1="68" x2="266" y2="68"/>
+<text class="sub" x="272" y="72">n = 10⁹</text>
+<line class="base" x1="64" y1="348.0" x2="600" y2="348.0"/>
+<text class="tick" x="56" y="352.0" text-anchor="end">1</text>
+<line class="grid" x1="64" y1="269.3" x2="600" y2="269.3"/>
+<text class="tick" x="56" y="273.3" text-anchor="end">10</text>
+<line class="grid" x1="64" y1="190.7" x2="600" y2="190.7"/>
+<text class="tick" x="56" y="194.7" text-anchor="end">100</text>
+<line class="grid" x1="64" y1="112.0" x2="600" y2="112.0"/>
+<text class="tick" x="56" y="116.0" text-anchor="end">1000</text>
+<text class="axis-title" x="16" y="98">мс</text>
+<text class="tick" x="64.0" y="368" text-anchor="middle">1</text>
+<text class="tick" x="198.0" y="368" text-anchor="middle">2</text>
+<text class="tick" x="332.0" y="368" text-anchor="middle">4</text>
+<text class="tick" x="466.0" y="368" text-anchor="middle">8</text>
+<text class="tick" x="600.0" y="368" text-anchor="middle">16</text>
+<text class="axis-title" x="332.0" y="388" text-anchor="middle">кількість потоків p</text>
+<line class="cores" x1="509.1" y1="112" x2="509.1" y2="348"/>
+<text class="tick" x="503.1" y="126" text-anchor="end">10 ядер</text>
+<line class="cores" x1="332.0" y1="112" x2="332.0" y2="348"/>
+<text class="tick" x="338.0" y="126">4 P-ядра</text>
+<polyline class="c1 line" points="64.0,237.4 198.0,260.4 332.0,280.6 466.0,287.9 600.0,289.1"/>
+<circle class="f1 dot" cx="64.0" cy="237.4" r="4.5"/>
+<circle class="f1 dot" cx="198.0" cy="260.4" r="4.5"/>
+<circle class="f1 dot" cx="332.0" cy="280.6" r="4.5"/>
+<circle class="f1 dot" cx="466.0" cy="287.9" r="4.5"/>
+<circle class="f1 dot" cx="600.0" cy="289.1" r="4.5"/>
+<polyline class="c2 line" points="64.0,182.4 198.0,205.5 332.0,226.2 466.0,234.0 600.0,236.8"/>
+<circle class="f2 dot" cx="64.0" cy="182.4" r="4.5"/>
+<circle class="f2 dot" cx="198.0" cy="205.5" r="4.5"/>
+<circle class="f2 dot" cx="332.0" cy="226.2" r="4.5"/>
+<circle class="f2 dot" cx="466.0" cy="234.0" r="4.5"/>
+<circle class="f2 dot" cx="600.0" cy="236.8" r="4.5"/>
+<polyline class="c3 line" points="64.0,158.6 198.0,181.8 332.0,203.4 466.0,212.8 600.0,214.8"/>
+<circle class="f3 dot" cx="64.0" cy="158.6" r="4.5"/>
+<circle class="f3 dot" cx="198.0" cy="181.8" r="4.5"/>
+<circle class="f3 dot" cx="332.0" cy="203.4" r="4.5"/>
+<circle class="f3 dot" cx="466.0" cy="212.8" r="4.5"/>
+<circle class="f3 dot" cx="600.0" cy="214.8" r="4.5"/>
+<text class="label" x="612" y="218.8">10⁹: 49 мс</text>
+<text class="label" x="612" y="240.8">5·10⁸: 26 мс</text>
+<text class="label" x="612" y="293.1">10⁸: 6 мс</text>
+</svg>
